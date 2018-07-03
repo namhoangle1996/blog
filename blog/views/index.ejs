@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/clean-blog.min.css" rel="stylesheet">
+    <script src="/javascripts/clean-blog.min.js"></script>
+    <script src="/javascripts/list.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+     <!-- <style>
+      .post-preview {
+        top: 200px!important;
+      }
+     </style>
+     -->
+      <style>
+        /* li {top: 0!important; left: 0!important;}
+       li > .item {bottom: 200px!important;}
+       */
+      </style>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link three-d" href="/"> <span title="home"> Home </span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link three-d" href="/about"><span title="about"> About </span></a>
+            </li>
+            <li class="nav-item three-d">
+              <a class="nav-link" href="/sample_post"><span title="sample post">Sample post</span></a>
+            </li>
+            <li class="nav-item three-d">
+              <a class="nav-link" href="/contact"> <span title="contact"> Contact</span> </a>
+            </li>
+            <li class="nav-item three-d">
+              <a class="nav-link" href="/login"> <span title="login"> Login</span> </a>
+            </li>
+            <li class="nav-item three-d">
+              <a class="nav-link" href="/chat"> <span title="Chat"> Chat</span> </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Clean Blog</h1>
+              <span class="subheading">A Blog Theme by Nam lee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- isotope menu -->
+    <div class="container">
+      <div class="row">
+          <div class="wraper">
+              <div class="iso-nav">
+                  <ul>
+                      <li class="active" data-filter="*">All Items</li>
+                      <li data-filter=".web">Web Design</li>
+                      <li data-filter=".graphic">Graphic Design</li>
+                      <li data-filter=".photo">Photography</li>
+                      <li data-filter=".photo">Photography</li>
+                  </ul>
+              </div>
+              <div class="main-iso">
+                  <!-- <div class="item web">
+                      <img src="img/home-bg.jpg" alt="" width="90%" height="200">
+                  </div>
+                  <div class="item graphic">
+                      <img src="img/about-bg.jpg" alt="" width="90%" height="200">
+                  </div>
+                  <div class="item photo">
+                      <img src="img/st.jpg" alt="" width="90%" height="200">
+                  </div>
+                  <div class="item">
+                      <img src="img/post-bg.jpg" alt="" width="90%" height="200">
+                  </div>
+                  <div class="item web">
+                      <img src="img/st.jpg" alt="" width="90%" height="200">
+                  </div>
+                  <div class="item web">
+                      <img src="img/st.jpg" alt="" width="90%" height="200">
+                  </div>
+                  <div class="item graphic">
+                      <img src="img/st.jpg" alt="" width="90%" height="200">
+                  </div>
+                  <div class="item photo">
+                      <img src="img/post-bg.jpg" alt="" width="90%" height="200">
+                  </div> -->
+              </div>
+          </div>
+      </div>
+    </div>
+
+     
+    
+
+<!-- //test -->
+    <!-- Main Content -->
+    <div class="container-fluid main-iso" id="users">
+      <!-- <div class="row" id="test"> -->
+        <div class="row">
+          <div class="col-2">
+            <input class="search" style="z-index: 2000;" placeholder="Search" />
+            <!-- class="sort" automagically makes an element a sort buttons. The date-sort value decides what to sort by. -->
+            <button class="sort" data-sort="name" style="">
+              Sort
+            </button>
+          </div>
+        <div class="col-10">
+        
+        <ul class="list" >
+            <% data.forEach(function(giatri){ %>
+          <li class="col-md-12 col-sm-12 post-preview item  <%= giatri.theloai %>" style="border-bottom : 1px solid #03A9F4; ">
+            <a href=" /chitietbaiviet/<%= giatri._id %>">
+              <h2 class="post-title">
+                <%= giatri.tieudelon %>
+              </h2>
+              <h3 class="post-subtitle name">
+                <%= giatri.tieudenho %>
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#"><%= giatri.trangthai %></a></p>
+            </li>
+          <hr>
+             <% })  %>   
+             
+          <!-- Pager -->
+          <!-- <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          </div> -->
+        </ul>
+      <!-- </div> -->
+    </div>
+  </div>
+
+
+    <hr>
+
+    <!-- Footer -->
+    <!-- <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                 <a href="https://www.facebook.com/groups/1693448147559716/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+               <a href="https://www.facebook.com/groups/1763196054005124/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+               <a href="https://www.facebook.com/Nam-1506465363007860/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    <!-- <div class="container" style="display: table; height: 400px; overflow: hidden;">
+      <div class="row" >
+          <div class="default-profile-photo float-left" style="display:table-cell;height:200px; width:200px;">
+             Hải Uyên
+          </div>
+          <div class="text float-right" style="display: table-cell; vertical-align: middle;line-height:200px;">Hải Uyên</div>
+
+      </div>
+    </div>
+    
+      <div id="custom">
+        R
+      </div> -->
+
+      
+      <script>
+          var options = {
+            valueNames: [ 'name', 'born' ]
+          };
+          var userList = new List('users', options);
+        </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/javascripts/clean-blog.min.js"></script>
+
+    <script src="/javascripts/isotope.pkgd.min.js"></script>
+<!--Custom Js file here ... -->
+
+<script src="/javascripts/material-avatar.min.js"></script>
+<script src="/javascripts/script.js"></script>
+<script src="/javascripts/snow2.js"></script>
+<script src="/javascripts/randomcolor.js"></script>
+<!-- <script>
+    MaterialAvatar(document.getElementsByClassName('md-avatar-circle'), {shape: 'circle'},{fontFamily:'Georgia'});
+    MaterialAvatar(document.getElementsByClassName('default-profile-photo '),{shape:'circle'});
+    $('#custom').materialAvatar({backgroundColor: 'blue', textColor: '#777'});
+ 
+</script> -->
+	<!-- <script src="/javascripts/pagination.full.min.js"></script> -->
+
+	<!-- <script type="text/javascript">
+		(function() {
+			var paginator = new pagination.ItemPaginator({prelink:'/', current: 3, rowsPerPage: 1, totalResult: 10});
+			var html = paginator.render();
+			var paginator = pagination.create('search', {prelink:'/', current: 1, rowsPerPage: 1, totalResult: 10});
+			html += paginator.render();
+			document.getElementById("test").innerHTML = html;
+		})();
+    </script> -->
+    
+  </body>
+
+</html>

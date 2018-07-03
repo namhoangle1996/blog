@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+
+	<title>
+		authenticate
+	</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <div class="progress">
+      <div class="indeterminate"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <nav>
+        <ul>
+         <li><a href="/">Home</a></li>
+
+         <% if(!user) { %>
+
+         <li><a href="/auth/login">Login</a></li>
+         <% } else { %>
+         <li><a href="/auth/logout">Logout</a></li>
+
+         <% } %>          
+       </ul>
+     </nav>
+     <header>
+       <h1>LOGIN PAGE</h1>
+     </header>
+     <main>
+
+       <a class="google-btn waves-effect waves-light btn-large" href="/auth/google"> 
+        <i class="material-icons right">send</i>
+         Google+
+       </a>
+        <a class="google-btn waves-effect waves-light btn-large"  href="/auth/Facebook"
+         style="    color: snow;background: #03a9f4fc;" > 
+        <i class="material-icons right">send</i>
+         Facebook
+       </a>
+   </div>
+ </div>
+
+</main>
+</body>
+</html>
