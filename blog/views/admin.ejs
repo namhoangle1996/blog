@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .icon-block {
+            padding: 0 15px;
+        }
+
+        .icon-block .material-icons {
+            font-size: inherit;
+        }
+
+        img {
+            max-width: 100%!important;
+            height: 64px!important;
+        }
+
+        .container:hover {
+            background: white;
+            transition: 0.4s;
+            color: #03A9F4;
+
+            transform: scale(1.1);
+        }
+
+        .container {
+            background: #03A9F4;
+            font-size: 25px;
+            color: snow;
+            height: 100px;
+            line-height: 100px;
+            padding-left: 50px;
+            border-bottom: 1px solid white;
+            box-shadow: 4px 7px 9px;
+        }
+
+        body {
+            background: lightblue
+        }
+
+        /* .second {     background: #e66464 !important; }*/
+    </style>
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container-fluid">
+            <a id="logo-container" href="#" class="brand-logo"></a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="#">
+                        <img class="responsive-img" src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-0/p206x206/10294322_317418898414654_6184203908903656438_n.jpg?_nc_cat=0&oh=bad31fe17183e5cdf90332cab9314da0&oe=5BEBB99D">
+                    </a>
+                </li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="#">Admin</a>
+                </li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="#">Đăng xuất</a>
+                </li>
+            </ul>
+
+
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <a href="/admin/index">
+        <div class="container">
+            <div class="row">
+                <div class="col s4">Quản lí bài viết</div>
+                <div class="col 8"></div>
+            </div>
+        </div>
+    </a>
+    <div class="container second">
+        <div class="row">
+            <div class="col s4">Quản lí danh mục</div>
+            <div class="col 8"></div>
+        </div>
+    </div>
+    <div class="container third">
+        <div class="row">
+            <div class="col s4">Quản lí bình luận</div>
+            <div class="col 8"></div>
+        </div>
+    </div>
+
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</body>
+
+</html>
