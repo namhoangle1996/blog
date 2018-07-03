@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <% data.forEach(function(giatri){ %>
+                    <form action="/chitietbaiviet/<%= giatri._id %>">
+                        <div class="form-group">
+                            <label for="tieudelon" style="font-weight:bold">Tieudelon</label>
+                            <input type="text" class="form-control" name="tieudelon" id="" value="<%=giatri.tieudelon %>" placeholder="">
+                            <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->                        <small id="helpId" class="form-text text-muted"> &nbsp;</small>
+                            <h1><%=giatri.tieudelon %></h1>
+            
+                            <label for="tieudenho " style="font-weight:bold">Tieudenho</label>
+                            <input type="text" class="form-control" name="tieudenho" id="" value="<%=giatri.tieudenho %>" placeholder="">
+                            <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->                        <small id="helpId" class="form-text text-muted"> &nbsp;</small>
+            
+                            
+                            <label for="trangthai " style="font-weight:bold" >Ngày xuất bản</label>
+                            <input type="text" class="form-control" name="trangthai" id="" value="<%=giatri.trangthai %>" placeholder="">
+                            <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->                        <small id="helpId" class="form-text text-muted"> &nbsp;</small>
+            
+                            
+                            
+                            <label for="trangthai" style="font-weight:bold">Link</label>
+                            <input type="text" class="form-control" name="link" id="" value="<%=giatri.link %>"     aria-describedby="helpId" placeholder="" >
+                            <small id="helpId" class="form-text text-muted"> &nbsp;</small>
+                            
+                            <label for="trangthai" style="font-weight:bold">Thể loại</label>
+                            <input type="text" class="form-control" name="theloai" value="<%=giatri.theloai %>"   id="" aria-describedby="helpId" placeholder="">
+                            <small id="helpId" class="form-text text-muted"> &nbsp;</small>
+            
+                            <!-- <button type="submit" class="btn btn-primary">OK</button> -->
+                        </div>
+                    </form>
+            
+            
+                    <% }) %>
+            </div>
+        </div>
+    </div>
+ 
+     
+    <div class="container">
+        <div class="row">
+            <form action="">
+                <div></div>
+                <div class="col s2"></div>
+                <div class="col s8"> Bình luận của bạn <h3> <%= user.username %> </h3> 
+                    <img  src="<%= user.avatar %>" alt="">
+                    <form method="get">
+                        <!-- -->
+                        <textarea name="body" style="color: black;
+                                              line-height: 1.2em;
+                                              height: 90px;
+                                              margin: 0 -5px;
+                                              width: 100%;">
+                        
+                                          </textarea>
+                        <br/>
+    
+                        <small style="font-style: italic">
+                            <h3> <%= user.username %> </h3> 
+                            <span class="italic-text">
+                                Bình luận không dấu, chửi thề, vi phạm thuần phong mỹ tục Việt Nam,…sẽ không được đăng.
+                            </span>
+                        </small>
+                        <br>
+                        <div class="text-xs-center">
+                            <button class="btn waves-effect waves-light" type="submit" name="action" style="background: #f1bc78;color: white;margin-top: 10px;">Send
+                                <i class="material-icons right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col s4"></div>
+            </form>
+        </div>
+    </div> 
+
+   
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>
+		authenticate
+	</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+</head>
+<body>
+   <div class="container">
+      <div class="row">
+         <nav>
+            <ul>
+               <li><a href="/home">Home</a></li>
+
+               <% if(!user) { %>
+
+               <li><a href="/auth/login">Login</a></li>
+               <% } else { %>
+               <li><a href="/auth/logout">Logout</a></li>
+               <li><a href="/profile">Profile</a></li>
+               <% } %>          
+
+
+            </ul>
+         </nav>
+         <header>
+           <h1> ALO</h1>
+           <h1>Home page</h1>
+        </header>
+        <main>
+          <p>
+           welcome to website !
+           
+        </p>
+     </div>
+  </div>
+<div class="container">
+  <div class="row">
+     <main>
+      <p>
+        Welcome to my blog ,   <h3> <%= user.username %> </h3> 
+  
+      </p>
+      <h4 >
+         Your avatar:  <img  src="<%= user.avatar %>" alt="">
+      </h4>
+  </div>
+</main>
+  </div>
+</div>
+ 
+</body>
+</html>

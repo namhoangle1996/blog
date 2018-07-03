@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> <%= title %> </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        function lele(message){
+            if(window.confirm(message)==true){
+                return true;
+               
+            }
+            else return false;
+         }
+    </script>
+    <style>
+    body {background: linear-gradient(86deg,#eadfe1,#03A9F4);}
+    .jumbotron-fluid {background: transparent; }
+    .table-hover tbody tr:hover {
+    background-color: #ffffffbf;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.5s;
+    transform: scale(1.05);
+    color: #03A9F4;
+    }
+    .table td { vertical-align: middle!important;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+           <div class="jumbotron jumbotron-fluid">
+               <div class="container">
+                   <h1 class="display-3 text-center mb-4 float-left">Danh sách bài viết</h1>
+                   <h1 class="float-right"> <a href="../admin/index/add"><i class="fa fa-plus" aria-hidden="true"></i></a>  </h1>
+               <table class="table  table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tiêu đề lớn</th>
+                        <th scope="col">Tiêu đề nhỏ</th>
+                        <th scope="col">Ngày xuất bản</th>
+                        <th scope="col">Link bài viết</th>
+                        <th scope="col">Thể loại</th>
+                        </tr>
+                    </thead>
+                  
+                        <tbody>
+                          <% data.forEach(function(giatri){ %>
+                            <tr>
+                                <th scope="row"></th>
+                                <td><%= giatri.tieudelon %></td>
+                                <td><%= giatri.tieudenho %></td>   
+                                <td><%= giatri.trangthai %></td>      
+                                <td><%= giatri.link %></td>   
+                                <td><%= giatri.theloai %></td>      
+                                    
+                                <td>
+                                    <a href="/admin/index/edit/<%= giatri._id %>"> <i class="fa fa-edit "></i></a> &nbsp;/&nbsp; 
+                                    <a onclick="return lele('Ban chắc chắn muốn xóa? ');" href="/admin/index/xoa/<%= giatri._id %>"> <i class="fa fa-remove" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                           <% })  %>                
+                       </tbody>
+            
+                    
+                </table>
+               </div>
+           </div>
+    </div>
+   
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

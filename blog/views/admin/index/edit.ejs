@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+ 
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <style>
+            body {background: linear-gradient(86deg,#eadfe1,#03A9F4);}
+            .jumbotron{background: transparent; }
+            .table-hover tbody tr:hover {
+            background-color: #ffffffbf;
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);}
+            </style>
+</head>
+
+<body>
+    <!-- <textarea></textarea> -->
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3 mb-4">Hello Nam</h1>
+            </div>
+            
+            <% data.forEach(function(giatri){ %>
+                <form action="/admin/index/edit/<%= giatri._id %>" method="POST">
+                    <div class="form-group">
+                        <label for="tieudelon" style="font-weight:bold">Tieudelon</label>
+                        <input type="text" class="form-control" name="tieudelon" id="" value="<%=giatri.tieudelon %>" placeholder="">
+                        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->                        <small id="helpId" class="form-text text-muted"> &nbsp;</small>
+
+
+                        <label for="tieudenho " style="font-weight:bold">Tieudenho</label>
+                        <textarea  class="form-control" name="tieudenho" > <%=giatri.tieudenho %></textarea>
+             
+
+                        
+                        <label for="trangthai " style="font-weight:bold" >Ngày xuất bản</label>
+                        <input type="text" class="form-control" name="trangthai" id="" value="<%=giatri.trangthai %>" placeholder="">
+                        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->                        <small id="helpId" class="form-text text-muted"> &nbsp;</small>
+
+                        
+                        
+                        <label for="trangthai" style="font-weight:bold">Link</label>
+                        <input type="text" class="form-control" name="link" id="" value="<%=giatri.link %>"     aria-describedby="helpId" placeholder="" >
+                        <small id="helpId" class="form-text text-muted"> &nbsp;</small>
+                        
+                        <label for="trangthai" style="font-weight:bold">Thể loại</label>
+                        <input type="text" class="form-control" name="theloai" value="<%=giatri.theloai %>"   id="" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted"> &nbsp;</small>
+
+                        <button type="submit" class="btn btn-primary">OK</button>
+                    </div>
+                </form>
+
+
+                <% }) %>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+ 
+    <!-- Include Editor JS files. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/js/froala_editor.pkgd.min.js"></script>
+ 
+    <!-- Initialize the editor. -->
+    <script> $(function() { $('textarea').froalaEditor() }); </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
